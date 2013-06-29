@@ -5,10 +5,14 @@
 	<title>Graph Navigation</title>
 	<link rel="stylesheet" type="text/css" href="reset.css" />
 	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Advent+Pro" />
 </head>
 <body>
+	<div id="page"></div>
+	<div id="target"></div>
+	
 	<div class="collection">
-		<div class="graph" id="home">
+		<div class="graph" id="home" data-page-title="Home" data-page-description="Red Pixel Studios &mdash; Design group specializing in Web Print and App development">
 			<div class="node">
 				<a href="#services">Services</a>
 			</div>
@@ -26,7 +30,7 @@
 			</div>
 		</div>
 		
-		<div class="graph" id="services">
+		<div class="graph" id="services" data-page-title="Services" data-page-description="Red Pixel Studios has the design and technical expertise to captivate your audience.">
 			<div class="node origin">
 				<a href="#home">Home</a>
 			</div>
@@ -50,6 +54,72 @@
 			</div>
 			<div class="node">
 				<a href="#services-facebook">Facebook</a>
+			</div>
+		</div>
+		
+		<div class="graph" id="services-print" data-page-title="Print" data-page-description="Red Pixel Studios has extensive publishing and design experience to create compelling deliverables for virtually every medium including direct mail, advertisements, periodicals and stationery.">
+			<div class="node origin">
+				<a href="#services">Services</a>
+			</div>
+		</div>
+		
+		<div class="graph" id="services-identity" data-page-title="Identity" data-page-description="">
+			<div class="node origin">
+				<a href="#services">Services</a>
+			</div>
+		</div>
+		
+		<div class="graph" id="services-web" data-page-title="Web" data-page-description="">
+			<div class="node origin">
+				<a href="#services">Services</a>
+			</div>
+		</div>
+		
+		<div class="graph" id="services-apps" data-page-title="Apps" data-page-description="">
+			<div class="node origin">
+				<a href="#services">Services</a>
+			</div>
+		</div>
+		
+		<div class="graph" id="services-message" data-page-title="Message" data-page-description="">
+			<div class="node origin">
+				<a href="#services">Services</a>
+			</div>
+		</div>
+		
+		<div class="graph" id="services-seo" data-page-title="SEO" data-page-description="">
+			<div class="node origin">
+				<a href="#services">Services</a>
+			</div>
+		</div>
+		
+		<div class="graph" id="services-facebook" data-page-title="Facebook" data-page-description="">
+			<div class="node origin">
+				<a href="#services">Services</a>
+			</div>
+		</div>
+		
+		<div class="graph" id="portfolio" data-page-title="Portfolio" data-page-description="">
+			<div class="node origin">
+				<a href="#home">Home</a>
+			</div>
+		</div>
+		
+		<div class="graph" id="plugins" data-page-title="Plugins" data-page-description="">
+			<div class="node origin">
+				<a href="#home">Home</a>
+			</div>
+		</div>
+		
+		<div class="graph" id="about" data-page-title="About" data-page-description="">
+			<div class="node origin">
+				<a href="#home">Home</a>
+			</div>
+		</div>
+		
+		<div class="graph" id="contact" data-page-title="Contact" data-page-description="">
+			<div class="node origin">
+				<a href="#home">Home</a>
 			</div>
 		</div>
 	</div>

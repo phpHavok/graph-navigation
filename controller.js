@@ -22,6 +22,14 @@
 							complete.call( this );
 						}
 					);
+				
+				$( '#page' )
+					.stop()
+					.fadeOut( 250 );
+				
+				$( '#target' )
+					.stop()
+					.fadeOut( 250 );
 			};
 			
 			var loadGraph = function( $graph ) {
@@ -36,22 +44,46 @@
 				$graph.fadeIn(
 					250,
 					function() {
-						$( this ).on(
-							'click.sunsoft',
-							'.node a',
-							function( e ) {
-								e.preventDefault();
-								
-								var _self = this;
-								
-								unloadGraph(
-									$graph,
-									function() {
-										loadGraph( $( $( _self ).attr( 'href' ) ) );
-									}
-								);
-							}
-						);
+						$( this )
+							.on(
+								'click.sunsoft',
+								'.node a',
+								function( e ) {
+									e.preventDefault();
+									
+									var _self = this;
+									
+									unloadGraph(
+										$graph,
+										function() {
+											loadGraph( $( $( _self ).attr( 'href' ) ) );
+										}
+									);
+								}
+							)
+							.on(
+								'mouseenter.sunsoft',
+								'.node a',
+								function() {
+									var $target = $( $( this ).attr( 'href' ) );
+									$( '#target' )
+										.html(
+											'<h1>' + $target.data( 'page-title' ) + '</h1>' +
+											'<p>' + $target.data( 'page-description' ) + '</p>'
+										)
+										.stop()
+										.fadeIn( 250 );
+								}
+							)
+							.on(
+								'mouseleave.sunsoft',
+								'.node a',
+								function() {
+									$( '#target' )
+										.stop()
+										.fadeOut( 250 );
+								}
+							)
 					}
 				);
 				
@@ -71,6 +103,13 @@
 						angle += distribution;
 					}
 				);
+				
+				$( '#page' )
+					.html(
+						'<h1>' + $graph.data( 'page-title' ) + '</h1>' +
+						'<p>' + $graph.data( 'page-description' ) + '</p>'
+					)
+					.fadeIn( 250 );
 			};
 			
 			loadGraph( $( '#home', $collection ) );
