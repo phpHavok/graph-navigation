@@ -53,17 +53,20 @@ body {
 	width: 16px;
 	height: 16px;
 	overflow: hidden;
-	color: #000;
+	color: transparent;
 	background: #000;
 	border-radius: 8px;
 	-moz-border-radius: 8px;
 	-webkit-border-radius: 8px;
-	transition: color 0.5s, background-color 0.5s;
-	-moz-transition: color 0.5s, background-color 0.5s;
-	-webkit-transition: color 0.5s, background-color 0.5s;
+	transition: background-color 0.5s;
+	-moz-transition: background-color 0.5s;
+	-webkit-transition: background-color 0.5s;
+}
+
+.graph .node.origin a {
+	background: #900;
 }
 
 .graph .node a:hover {
-	color: #666;
 	background: #666;
 }
