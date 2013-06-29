@@ -5,8 +5,6 @@
 			var $graph = $( '.graph.active', $collection );
 			
 			var $nodes = $( '.node', $graph );
-			
-			var $origin = $nodes.filter( '.origin' );
 			var $siblings = $nodes.filter( ':not(.origin)' );
 			
 			var radius_min = 100;
@@ -23,8 +21,7 @@
 					$( this ).css(
 						{
 							marginLeft: '+=' + x,
-							marginTop: '+=' + y,
-							
+							marginTop: '+=' + y
 						}
 					);
 					
