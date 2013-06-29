@@ -1,0 +1,69 @@
+html, body {
+	height: 100%;
+}
+
+body {
+	background: #ffffff;
+	background: -moz-radial-gradient(center, ellipse cover,  #ffffff 0%, #cccccc 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#ffffff), color-stop(100%,#cccccc));
+	background: -webkit-radial-gradient(center, ellipse cover,  #ffffff 0%,#cccccc 100%);
+	background: -o-radial-gradient(center, ellipse cover,  #ffffff 0%,#cccccc 100%);
+	background: -ms-radial-gradient(center, ellipse cover,  #ffffff 0%,#cccccc 100%);
+	background: radial-gradient(ellipse at center,  #ffffff 0%,#cccccc 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#cccccc',GradientType=1 );
+}
+
+.hidden {
+	display: none;
+}
+
+.collection {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.graph {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+
+.graph.active {
+	display: block;
+}
+
+.graph .node {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	margin: -8px 0 0 -8px;
+	left: 50%;
+	top: 50%;
+	transition: margin-left 0.5s, margin-top 0.5s;
+	-moz-transition: margin-left 0.5s, margin-top 0.5s;
+	-webkit-transition: margin-left 0.5s, margin-top 0.5s;
+}
+
+.graph .node a {
+	display: block;
+	width: 16px;
+	height: 16px;
+	overflow: hidden;
+	color: #000;
+	background: #000;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	transition: color 0.5s, background-color 0.5s;
+	-moz-transition: color 0.5s, background-color 0.5s;
+	-webkit-transition: color 0.5s, background-color 0.5s;
+}
+
+.graph .node a:hover {
+	color: #666;
+	background: #666;
+}
